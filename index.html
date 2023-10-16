@@ -1,23 +1,98 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Radley:ital@0;1&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="css/externalCSS.css">
+        <link rel="stylesheet" type="text/css" href="css/externalCSS2.css">
+
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+
+          @media only screen and (max-width: 600px) {
+            [class*="col-"] {
+              width: 100%;
+            }
+            div.mycstu {
+              display: block;
+            }
+            .flex{
+                display: block;
+            }
+            .width502 {
+                display: flex;
+                justify-content: center;
+            }
+            #arrow {
+                display: none;
+            }
+            #video{
+                width:300px; 
+                height:auto;
+                padding: 20px;
+                margin-left: 0px;
+            }
+            #divvideo {
+                padding: 0px;
+            }
+          }
+
+          @media only screen and (max-width: 768px) {           
+            [class*="col-"] {
+              width: 100%;
+            }
+            div.mycstu {
+              display: block;
+            }
+            .flex{
+                display: block;
+            }
+            .width502 {
+                display: flex;
+                justify-content: center;
+            }
+            #video{
+                width:300px; 
+                height:auto;
+                padding: 20px;
+                margin-left: 0px;
+            }
+            #divvideo {
+                padding: 0px;
+            }
+          }
+
+        </style>
         
     </head>
     
     <body>
 
         <div class="mycstu">
-            <div>
+            <div class="col-3">
                 <img src="image/Star.png" class="star1">
             </div>
-            <div>
+            <div class="col-6">
                 <div class="centercstu">
                     <div>
                         <h1 >My<span class="cstu">&nbsp;CSTU</span></h1>
@@ -28,22 +103,21 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="col-3">
                 <div id="navihome"><em><a href="index.html" class="navilink">Home</a></em></div>
                 <div id="naviadvisor"><em><a href="html/myAdvisor.html" class="navilink">myAdvisor</a></em></div>
                 <div id="naviactivity"><em><a href="html/myActivities.html" class="navilink">myActivities</em></a></div>
             </div>
         </div>
 
-
         <div class="flex">
-           <div class="width50" >
+           <div class="col-6 width501" >
                 <div> 
                     <h2 class="gettoknow">Get to know <span class="brown"><em>ME!</em></span></h2>
                 </div>
 
-                <div>               
-                    <h2 class="personalinfo"><em>Personal<br> information</em>
+                <div class="personalinfo">               
+                    <h2><em>Personal<br>information</em>
                     </h2>
                 </div>
 
@@ -62,9 +136,9 @@
                 </div>
             </div>
 
-            <div class="width50">
-                <img src="image/cs100pic.png" id="picofme">
-                <img src="image/Star2.png" class="star2">
+            <div class="col-6 width502">
+                    <img src="image/cs100pic.png" id="picofme">
+                    <img src="image/Star2.png" class="star2">
             </div>
         </div>
 
@@ -78,7 +152,7 @@
         <div class="padding5">
             <div class="flex"> 
 
-                <div class="divhobconlist">
+                <div class="col-3 divhobconlist">
                     <img src="image/eating.png" class="hobbypic">
                     <h4>Eating</h4>
                     <div class="hobbydescription">
@@ -86,7 +160,7 @@
                     </div>
                 </div>
 
-                <div class="divhobconlist">
+                <div class="col-3 divhobconlist">
                     <img src="image/book.png" class="hobbypic">
                     <h4>Learning Japanese</h4>
                     <div class="hobbydescription">
@@ -94,7 +168,7 @@
                     </div>
                 </div>
 
-                <div class="divhobconlist">
+                <div class="col-3 divhobconlist">
                     <img src="image/Music.png" class="hobbypic">
                     <h4>Listening Music</h4>
                     <div class="hobbydescription">
@@ -108,9 +182,10 @@
         <h2 id="aboutme">About <span><em>ME</em></span></h2>
 
         <div id="divvideo">
-            <video src="VDO/cs100video.mp4" id="video" controls></video>
-            <img src="image/Arrow.png" id="arrow">
-            <h3 id="videoabtme"><em>video about myself</em> </h3>
+            <div>
+                <video src="VDO/cs100video.mp4" id="video" controls></video>
+                <img src="image/arrow.png" id="arrow">
+            </div>
         </div>
 
 
